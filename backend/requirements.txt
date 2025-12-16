@@ -1,0 +1,27 @@
+# FastAPI and server
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.18
+
+# Configuration
+pydantic-settings==2.7.0
+
+# OpenAI-compatible client for N-ATLaS
+openai==1.58.1
+
+# Speech-to-Text (Whisper)
+openai-whisper==20240930
+ffmpeg-python==0.2.0
+
+# Text-to-Speech
+edge-tts==6.1.19
+
+# Audio processing
+pydub==0.25.1
+
+# Async utilities
+httpx==0.28.1
+aiofiles==24.1.0
+
+# Web Search
+duckduckgo-search==6.3.2

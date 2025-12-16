@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #008751;
+  --color-primary-light: #00A86B;
+  --color-primary-dark: #006B3F;
+
+  --color-secondary: #2D3436;
+  --color-secondary-light: #636E72;
+
+  --color-bg-primary: #0D1117;
+  --color-bg-secondary: #161B22;
+  --color-bg-tertiary: #21262D;
+  --color-bg-card: rgba(33, 38, 45, 0.7);
+  --color-bg-glass: rgba(22, 27, 34, 0.8);
+
+  --color-text-primary: #F0F6FC;
+  --color-text-secondary: #8B949E;
+  --color-text-muted: #6E7681;
+
+  --font-sans: 'Inter', sans-serif;
+
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 3s ease-in-out infinite;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-bg-primary text-text-primary font-sans overflow-hidden min-h-screen;
+    background-image:
+      radial-gradient(circle at 10% 20%, rgba(0, 135, 81, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(0, 135, 81, 0.08) 0%, transparent 40%);
+  }
+
+  /* Custom Scrollbar - Sleek Modern Design */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(139, 148, 158, 0.3);
+    border-radius: 3px;
+    transition: background 0.2s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(139, 148, 158, 0.5);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* Firefox scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(139, 148, 158, 0.3) transparent;
+  }
+}
